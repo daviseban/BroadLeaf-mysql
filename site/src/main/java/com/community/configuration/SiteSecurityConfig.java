@@ -96,6 +96,7 @@ public class SiteSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
+        /*
         web
             .ignoring()
                 .antMatchers("/css/**")
@@ -104,6 +105,7 @@ public class SiteSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/js/**")
                 .antMatchers("/**/"+assetServerUrlPrefixInternal+"/**")
                 .antMatchers("/favicon.ico");
+                */
     }
 
     @Override
@@ -119,6 +121,7 @@ public class SiteSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        /*
         http
             .csrf().disable()
             .headers().frameOptions().disable().and()
@@ -149,6 +152,7 @@ public class SiteSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
             .addFilterBefore(sessionFixationProtectionFilter, SessionManagementFilter.class);
+            */
     }
 
     /**
