@@ -103,7 +103,7 @@ public class SiteSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/fonts/**")
                 .antMatchers("/img/**")
                 .antMatchers("/js/**")
-                .antMatchers("/**/"+assetServerUrlPrefixInternal+"/**")
+                .antMatchers("/**+assetServerUrlPrefixInternal+"/**")
                 .antMatchers("/favicon.ico");
                 */
     }
