@@ -96,7 +96,7 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       /*
+       
         http
             .authenticationProvider(authenticationProvider)
             .csrf().disable()
@@ -124,7 +124,8 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
             .logout()
                 .invalidateHttpSession(true)
                 .logoutUrl("/adminLogout.htm")
-                .logoutSuccessHandler(logoutSuccessHandler)
+                .logoutSuccessHandler(logoutSuccessHandler);
+        /*
                 .and()
             .portMapper()
                 .http(80).mapsTo(443)
