@@ -83,15 +83,10 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
+       /*
         web
             .ignoring()
-            .antMatchers("/**/*.css")
-            .antMatchers("/**/*.js")
-            .antMatchers("/img/**")
-            .antMatchers("/fonts/**")
-            .antMatchers("/**/"+assetServerUrlPrefixInternal+"/**")
-            .antMatchers("/favicon.ico")
-            .antMatchers("/robots.txt");
+        */
     }
 
     @Override
@@ -101,6 +96,7 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+       /*
         http
             .authenticationProvider(authenticationProvider)
             .csrf().disable()
@@ -136,6 +132,7 @@ public class AdminSecurityConfig extends WebSecurityConfigurerAdapter {
                 .http(8081).mapsTo(8444)
                 .and()
                 .addFilterBefore(adminCsrfFilter, UsernamePasswordAuthenticationFilter.class);
+                */
     }
 
     /**
