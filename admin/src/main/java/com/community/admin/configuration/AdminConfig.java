@@ -50,7 +50,7 @@ public class AdminConfig {
      * @return EmbeddedServletContainerFactory
      */
     @Bean
-    public EmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory(@Value("${http.server.port:8081}") int httpServerPort) {
+    public EmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory(@Value("${http.server.port:8080}") int httpServerPort) {
         TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory();
         tomcat.addAdditionalTomcatConnectors(createStandardConnector(httpServerPort));
         return tomcat;
