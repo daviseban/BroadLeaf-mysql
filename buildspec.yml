@@ -20,5 +20,4 @@ phases:
 artifacts:
   files:
     - site/target/mycompany.war
-    - admin/target/admin.war
   discard-paths: yes
