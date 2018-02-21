@@ -231,7 +231,7 @@
 
             "files" : {
 			  "/var/lib/tomcat8/webapps/mycompany.war" : {
-                "source" : "https://s3.us-east-2.amazonaws.com/cmp-pipeline-test/build_test/testing_build/mycompany.war ",
+                "source" : "https://s3.us-east-2.amazonaws.com/cmp-pipeline-test/build_test/testing_build/mycompany.war",
                 "mode"  : "000666",
                 "owner" : "tomcat",
                 "group" : "tomcat"
