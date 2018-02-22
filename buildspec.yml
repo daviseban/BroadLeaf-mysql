@@ -17,6 +17,8 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
       - echo "******** Uploading to S3 ********"
+      - aws s3 cp site/target/mycompany.war s3://cmp-pipeline-test2/build/broadleaf
+      - aws s3 cp broadleaf.json s3://cmp-pipeline-test2/build/broadleaf
 artifacts:
   files:
     - site/target/mycompany.war
