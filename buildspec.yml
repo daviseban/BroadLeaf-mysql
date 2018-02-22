@@ -20,5 +20,5 @@ phases:
 artifacts:
   files:
     - site/target/mycompany.war
-    - broadleaf
+    - broadleaf.json
   discard-paths: yes
