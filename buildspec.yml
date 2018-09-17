@@ -22,5 +22,6 @@ phases:
 artifacts:
   files:
     - site/target/mycompany.war
-    - broadleaf.json
+    - appspec.yml
+    - scripts/*
   discard-paths: yes
