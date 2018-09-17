@@ -16,12 +16,13 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
-      - echo "******** Uploading to S3 ********"
-      - aws s3 cp site/target/mycompany.war s3://cmp-pipeline/build/broadleaf/
-      - aws s3 cp broadleaf.json s3://cmp-pipeline/build/broadleaf/
 artifacts:
   files:
     - site/target/mycompany.war
-    - appspec.yml
-    - scripts/*
   discard-paths: yes
+  secondary-artifacts:
+    scripts:
+      files:
+        - appspec.yml
+        - scripts/*
+      discard-paths: no
