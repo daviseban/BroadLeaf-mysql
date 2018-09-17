@@ -18,11 +18,9 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - site/target/mycompany.war
-  discard-paths: yes
-  secondary-artifacts:
-    scripts:
-      files:
-        - appspec.yml
-        - scripts/*
-      discard-paths: no
+    - mycompany.war
+    - ../../appspec.yml
+    - ../../scripts/*
+  discard-paths: no
+  base-directory: site/target
+ 
