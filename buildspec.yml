@@ -16,11 +16,12 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+      - aws s3 cp s3://cmp-pipeline/build/broadleaf/codedeployscripts/* site/target
 artifacts:
   files:
     - mycompany.war
-    - ../../appspec.yml
-    - ../../scripts/*
+    - appspec.yml
+    - scripts/*
   discard-paths: no
   base-directory: site/target
  
