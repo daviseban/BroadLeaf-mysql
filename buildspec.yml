@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
-      - aws s3 cp s3://cmp-pipeline/build/broadleaf/codedeployscripts/* site/target
+      - aws s3 cp s3://cmp-pipeline/build/broadleaf/codedeployscripts site/target --recursive
 artifacts:
   files:
     - mycompany.war
